@@ -210,3 +210,10 @@
     types: [text]
     stages: [pre-commit, pre-push, manual]
     minimum_pre_commit_version: 3.2.0
+-   id: uncrustify-pre-commit
+    name: uncrustify-pre-commit
+    description: 'Runs uncrustify on changed files before committing them'
+    entry: uncrustify-pre-commit
+    language: python
+    stages: [commit]
+    types: [c]
