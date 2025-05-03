@@ -210,6 +210,17 @@ Trims trailing whitespace.
   - By default, this hook trims all whitespace from the ends of lines.
     To specify a custom set of characters to trim instead, use `args: [--chars,"<chars to trim>"]`.
 
+#### `uncrustify-pre-commit` -> [NEWS]
+This pre-commit hook runs uncrustify on all changed source files before committing the changes.  
+*to use this hook, uncrustify must be installed*
+
+Args: 
+* --config=<uncrustify_config_file> (required) - a path to a config file for uncrustify
+* --strict (optional) - if this option is provided than the commit hook will fail if the coding format is incorrect. Without this option, the hook will automatically fix the formatting errors.
+
+
+*Note that if files are automatically fixed, the user must still accecpt the changes by adding the files and committing them again.*
+
 ### Deprecated / replaced hooks
 
 - `check-byte-order-marker`: instead use fix-byte-order-marker
